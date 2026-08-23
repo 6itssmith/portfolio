@@ -86,22 +86,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 
 function updateNavbar() {
-    const sections = document.querySelectorAll('section');
+    // Resolve the current page's filename (default to index.html for "/" or "")
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const dropdownItems = document.querySelectorAll('.navbar-nav .dropdown-item');
 
-    let current = '';
+    // Reset all active states first
+    navLinks.forEach(link => link.classList.remove('active'));
+    dropdownItems.forEach(item => item.classList.remove('active'));
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id') || '';
+    // Top-level links (Home, Contact, etc.) — exact filename match only
+    document.querySelectorAll('.navbar-nav > .nav-item > .nav-link:not(.dropdown-toggle)').forEach(link => {
+        const href = (link.getAttribute('href') || '').split('/').pop();
+        if (href && href === currentFile) {
+            link.classList.add('active');
         }
     });
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(window.location.pathname.split('/').pop())) {
-            link.classList.add('active');
+    // Dropdown items — exact filename match, and light up the parent toggle too
+    dropdownItems.forEach(item => {
+        const href = (item.getAttribute('href') || '').split('/').pop();
+        if (href && href === currentFile) {
+            item.classList.add('active');
+            const parentDropdown = item.closest('.dropdown');
+            const parentToggle = parentDropdown ? parentDropdown.querySelector('.dropdown-toggle') : null;
+            if (parentToggle) {
+                parentToggle.classList.add('active');
+            }
         }
     });
 }
@@ -508,9 +520,6 @@ function debounce(func, wait) {
     };
 }
 
-window.addEventListener('scroll', debounce(function() {
-    updateNavbar();
-}, 100));
 // Achievements Filter
 document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.gallery-filters .gallery-filter-btn');

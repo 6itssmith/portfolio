@@ -20,28 +20,109 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark premium-nav fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand brand-text" href="index.html">
-                <span class="brand-icon"><i class="fa-solid fa-gem"></i></span> Smith
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="works.html">Works</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand brand-text" href="index.html">
+          <img class="brand-icon" src="assets/img/logo.png" alt="" /> Smith
+        </a>
+
+        <!-- Controls container: keeps theme toggler & hamburger aligned together on the right -->
+        <div
+          class="d-flex align-items-center gap-2 ms-auto me-2 me-lg-0 order-lg-last"
+        >
+          <div class="theme-toggler mb-0">
+            <i id="toggler" class="fa-regular fa-moon"></i>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="aboutDropdown"
+              >
+                <li>
+                  <a class="dropdown-item nav-close-item" href="about.html"
+                    >About Me</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="skills.html"
+                    >Skills</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="resume.html"
+                    >Resume</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Portfolio Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="portfolioDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Portfolio
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="portfolioDropdown"
+              >
+                <li>
+                  <a class="dropdown-item nav-close-item" href="works.html"
+                    >Works</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="gallery.html"
+                    >Gallery</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <!-- Page Header -->
+<!-- Page Header -->
     <section class="page-header">
         <div class="container">
             <h1 class="page-title" data-aos="fade-up">Gallery</h1>
@@ -185,7 +266,7 @@
 
             </div>
 
-            <p class="text-muted small text-center mt-5" data-aos="fade-up">
+            <p class="small text-center mt-5" data-aos="fade-up">
                 <i class="fa-solid fa-circle-info me-1"></i>
                 These tiles are placeholders — swap the icon inside each
                 <code>.gallery-item-media</code> for an <code>&lt;img&gt;</code> tag once you have real photos.
@@ -205,7 +286,7 @@
                     <div class="gallery-modal-media" id="galleryModalMedia">
                         <i class="fa-solid fa-image"></i>
                     </div>
-                    <p class="text-muted mt-3 mb-0" id="galleryModalDesc"></p>
+                    <p class="mt-3 mb-0" id="galleryModalDesc"></p>
                 </div>
             </div>
         </div>
@@ -213,37 +294,81 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5 class="brand-text"><span class="brand-icon"><i class="fa-solid fa-gem"></i></span> Smith</h5>
-                    <p class="text-muted small">Full Stack Developer & Nursing Student</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h6>Navigation</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="works.html">Works</a></li>
-                        <li><a href="skills.html">Skills</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h6>Connect</h6>
-                    <div class="social-links">
-                        <a href="#" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" class="social-icon" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5 class="brand-text">
+              <span class="brand-icon"><i class="fa-solid fa-gem"></i></span>
+              Smith
+            </h5>
+            <p class="small">
+              Full Stack Developer & Nursing Student
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6>Navigation</h6>
+            <ul class="list-unstyled small">
+              <li><a href="about.html">About</a></li>
+              <li><a href="works.html">Works</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="skills.html">Skills</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6>Connect</h6>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/6-its-smith/"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/6itssmith"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://x.com/smithiian_34_"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/6_its.smith/"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://wa.link/kqwl1d"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
             </div>
-            <hr class="bg-dark-gold opacity-25">
-            <div class="text-center text-muted small">
-                <p>&copy; 2024 Smith. All rights reserved.</p>
-            </div>
+          </div>
         </div>
+        <hr class="bg-dark-gold opacity-25" />
+        <div class="text-center small">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Smith.
+          </p>
+        </div>
+      </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
     <script src="js/gallery.js"></script>

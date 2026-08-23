@@ -20,28 +20,109 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark premium-nav fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand brand-text" href="index.html">
-                <span class="brand-icon"><i class="fa-solid fa-gem"></i></span> Smith
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="works.html">Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand brand-text" href="index.html">
+          <img class="brand-icon" src="assets/img/logo.png" alt="" /> Smith
+        </a>
+
+        <!-- Controls container: keeps theme toggler & hamburger aligned together on the right -->
+        <div
+          class="d-flex align-items-center gap-2 ms-auto me-2 me-lg-0 order-lg-last"
+        >
+          <div class="theme-toggler mb-0">
+            <i id="toggler" class="fa-regular fa-moon"></i>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="aboutDropdown"
+              >
+                <li>
+                  <a class="dropdown-item nav-close-item" href="about.html"
+                    >About Me</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="skills.html"
+                    >Skills</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="resume.html"
+                    >Resume</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Portfolio Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="portfolioDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Portfolio
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="portfolioDropdown"
+              >
+                <li>
+                  <a class="dropdown-item nav-close-item" href="works.html"
+                    >Works</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="gallery.html"
+                    >Gallery</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <!-- Page Header -->
+<!-- Page Header -->
     <section class="page-header">
         <div class="container">
             <h1 class="page-title" data-aos="fade-up">My Works</h1>
@@ -69,7 +150,7 @@
                             
                             <div class="project-section">
                                 <h5 class="project-subtitle">Context / Problem</h5>
-                                <p class="text-muted">
+                                <p>
                                     Needed a modern property rental platform that could handle guest bookings, 
                                     property management, and payment processing while maintaining a clean, 
                                     intuitive user experience.
@@ -78,7 +159,7 @@
 
                             <div class="project-section">
                                 <h5 class="project-subtitle">Your Role</h5>
-                                <p class="text-muted">
+                                <p>
                                     Led full-stack development including guest-facing website and staff CMS. 
                                     Owned architecture decisions, payment integration, and booking dashboard functionality.
                                 </p>
@@ -86,7 +167,7 @@
 
                             <div class="project-section">
                                 <h5 class="project-subtitle">Process / Approach</h5>
-                                <ul class="text-muted tech-list">
+                                <ul class="tech-list">
                                     <li><strong>Frontend:</strong> Next.js for fast, SEO-optimized user interface</li>
                                     <li><strong>Backend:</strong> Supabase for real-time database and authentication</li>
                                     <li><strong>Payments:</strong> Integrated payment gateway for secure transactions</li>
@@ -96,7 +177,7 @@
 
                             <div class="project-section">
                                 <h5 class="project-subtitle">Outcome / Results</h5>
-                                <p class="text-muted">
+                                <p>
                                     Successfully launched platform handling multiple concurrent bookings, 
                                     improved staff efficiency by 40% through CMS automation, and 
                                     achieved 99.9% payment processing success rate.
@@ -133,7 +214,7 @@
                             
                             <div class="project-section">
                                 <h5 class="project-subtitle">Context / Problem</h5>
-                                <p class="text-muted">
+                                <p>
                                     Created a youth-focused media platform to deliver engaging content to younger audiences 
                                     with modern branding and interactive features.
                                 </p>
@@ -141,7 +222,7 @@
 
                             <div class="project-section">
                                 <h5 class="project-subtitle">Your Role</h5>
-                                <p class="text-muted">
+                                <p>
                                     Developed full-stack solution with emphasis on frontend user experience and Node.js backend. 
                                     Implemented brand system consistency across platform.
                                 </p>
@@ -149,7 +230,7 @@
 
                             <div class="project-section">
                                 <h5 class="project-subtitle">Process / Approach</h5>
-                                <ul class="text-muted tech-list">
+                                <ul class="tech-list">
                                     <li><strong>Frontend:</strong> React with custom component library for brand consistency</li>
                                     <li><strong>Backend:</strong> Node.js/Express for scalable API</li>
                                     <li><strong>Brand System:</strong> Comprehensive design system documentation</li>
@@ -159,7 +240,7 @@
 
                             <div class="project-section">
                                 <h5 class="project-subtitle">Outcome / Results</h5>
-                                <p class="text-muted">
+                                <p>
                                     Achieved 10k+ active youth users, strong engagement metrics, 
                                     and brand recognition within target demographic. 
                                     Established scalable platform for content delivery.
@@ -196,7 +277,7 @@
                             
                             <div class="project-section">
                                 <h5 class="project-subtitle">Context / Problem</h5>
-                                <p class="text-muted">
+                                <p>
                                     Developed wellness tracking application supporting both web and mobile platforms 
                                     with real-time data sync and AI-powered chat features.
                                 </p>
@@ -204,7 +285,7 @@
 
                             <div class="project-section">
                                 <h5 class="project-subtitle">Your Role</h5>
-                                <p class="text-muted">
+                                <p>
                                     Led VelourPWA development and Android-to-PWA migration. Implemented Firebase integration, 
                                     Cloudflare Worker proxy setup, and AI chat feature architecture.
                                 </p>
@@ -212,7 +293,7 @@
 
                             <div class="project-section">
                                 <h5 class="project-subtitle">Process / Approach</h5>
-                                <ul class="text-muted tech-list">
+                                <ul class="tech-list">
                                     <li><strong>Architecture:</strong> Progressive Web App for cross-platform compatibility</li>
                                     <li><strong>Database:</strong> Firebase for real-time sync and scalability</li>
                                     <li><strong>Proxy Layer:</strong> Cloudflare Workers for enhanced performance</li>
@@ -223,7 +304,7 @@
 
                             <div class="project-section">
                                 <h5 class="project-subtitle">Outcome / Results</h5>
-                                <p class="text-muted">
+                                <p>
                                     Reduced app size by 60% through PWA migration, improved load time to under 2 seconds, 
                                     increased user retention by 35%. AI chat handles 80% of user inquiries autonomously.
                                 </p>
@@ -248,45 +329,91 @@
     <section class="py-5 bg-section text-center">
         <div class="container" data-aos="fade-up">
             <h3 class="mb-4">Want to see more?</h3>
-            <p class="text-muted mb-4">I'm continuously working on new projects and improvements</p>
+            <p class="mb-4">Browse the rest of my code and side projects on GitHub, or get in touch directly</p>
+            <a href="https://github.com/6itssmith" target="_blank" rel="noopener noreferrer" class="btn btn-custom btn-outline-primary me-3">
+                <i class="fa-brands fa-github"></i> View GitHub Profile
+            </a>
             <a href="contact.html" class="btn btn-custom btn-primary">Get in Touch</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5 class="brand-text"><span class="brand-icon"><i class="fa-solid fa-gem"></i></span> Smith</h5>
-                    <p class="text-muted small">Full Stack Developer & Nursing Student</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h6>Navigation</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="skills.html">Skills</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h6>Connect</h6>
-                    <div class="social-links">
-                        <a href="#" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" class="social-icon" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5 class="brand-text">
+              <span class="brand-icon"><i class="fa-solid fa-gem"></i></span>
+              Smith
+            </h5>
+            <p class="small">
+              Full Stack Developer & Nursing Student
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6>Navigation</h6>
+            <ul class="list-unstyled small">
+              <li><a href="about.html">About</a></li>
+              <li><a href="works.html">Works</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="skills.html">Skills</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6>Connect</h6>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/6-its-smith/"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/6itssmith"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://x.com/smithiian_34_"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/6_its.smith/"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://wa.link/kqwl1d"
+                class="social-icon"
+                target="_blank" rel="noopener noreferrer"
+                title="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
             </div>
-            <hr class="bg-dark-gold opacity-25">
-            <div class="text-center text-muted small">
-                <p>&copy; 2024 Smith. All rights reserved.</p>
-            </div>
+          </div>
         </div>
+        <hr class="bg-dark-gold opacity-25" />
+        <div class="text-center small">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Smith.
+          </p>
+        </div>
+      </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
 </body>

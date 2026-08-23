@@ -185,8 +185,20 @@ p {
 
 .brand-icon {
   display: inline-flex;
-  height: 120px;
+  align-items: center;
+  height: 42px;
+  width: auto;
+  max-width: 42px;
+  object-fit: contain;
   transition: transform 0.4s ease;
+  vertical-align: middle;
+}
+
+/* The footer brand icon is a font icon, not the logo image — keep it compact */
+.footer .brand-icon {
+  height: auto;
+  max-width: none;
+  font-size: 1.1rem;
 }
 
 .navbar-nav {
@@ -290,7 +302,7 @@ p {
 
   /* Displays the sub-menu when toggled via JS */
   .navbar-nav .dropdown-menu.show {
-    display: block !importaaant;
+    display: block !important;
   }
 
   [data-theme="light"] .navbar-nav .dropdown-menu {
