@@ -511,7 +511,31 @@ function debounce(func, wait) {
 window.addEventListener('scroll', debounce(function() {
     updateNavbar();
 }, 100));
+// Achievements Filter
+document.addEventListener('DOMContentLoaded', () => {
+  const filterBtns = document.querySelectorAll('.gallery-filters .gallery-filter-btn');
+  const cards = document.querySelectorAll('#achievementsGrid .achievement-card');
 
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Active state
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      cards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'block';
+          card.classList.remove('filtered-out');
+        } else {
+          card.style.display = 'none';
+          card.classList.add('filtered-out');
+        }
+      });
+    });
+  });
+});
 // ============================================
 // ACCESSIBILITY IMPROVEMENTS
 // ============================================
