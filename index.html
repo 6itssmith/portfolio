@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smith - Full Stack Developer & Nursing Student</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts: Quintessential (headings) & Nunito (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
+
+    <!-- Font Awesome — replace with your own CDN/kit link if you have one -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark premium-nav fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand brand-text" href="index.html">
+          <img class="brand-icon" src="assets/img/logo.png" alt="" /> Smith
+        </a>
+
+        <!-- Controls container: keeps theme toggler & hamburger aligned together on the right -->
+        <div
+          class="d-flex align-items-center gap-2 ms-auto me-2 me-lg-0 order-lg-last"
+        >
+          <div class="theme-toggler mb-0">
+            <i id="toggler" class="fa-regular fa-moon"></i>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="aboutDropdown"
+              >
+                <li>
+                  <a class="dropdown-item nav-close-item" href="about.html"
+                    >About Me</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="skills.html"
+                    >Skills</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="resume.html"
+                    >Resume</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Portfolio Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="portfolioDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Portfolio
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="portfolioDropdown"
+              >
+                <li>
+                  <a class="dropdown-item nav-close-item" href="works.html"
+                    >Works</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="gallery.html"
+                    >Gallery</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section position-relative overflow-hidden">
+      <!-- Background Carousel -->
+      <div
+        id="heroBgCarousel"
+        class="carousel slide carousel-fade hero-bg-carousel"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <div
+              class="hero-bg-slide"
+              style="
+                background-image: url(&quot;https://res.cloudinary.com/dptw3wnjt/image/upload/v1787493067/IMG_0006_vcqcww.jpg&quot;);
+              "
+            ></div>
+          </div>
+          <div class="carousel-item h-100">
+            <div
+              class="hero-bg-slide"
+              style="
+                background-image: url(&quot;https://res.cloudinary.com/dptw3wnjt/image/upload/v1787492956/IMG_0005_icmlqs.jpg&quot;);
+              "
+            ></div>
+          </div>
+          <div class="carousel-item h-100">
+            <div
+              class="hero-bg-slide"
+              style="
+                background-image: url(&quot;https://res.cloudinary.com/dptw3wnjt/image/upload/v1787493033/IMG_3901_ljdddo.jpg&quot;);
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Darkness / Contrast Overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Foreground Content -->
+      <div
+        class="container h-100 d-flex align-items-center position-relative"
+        style="z-index: 2"
+      >
+        <div class="row w-100">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="hero-title mb-4">
+              Creative Developer <span class="accent-text">&</span> Nursing
+              Innovator
+            </h1>
+            <p class="hero-subtitle mb-5">
+              Crafting digital experiences while pursuing healthcare excellence.
+              Full-stack development meets compassionate care.
+            </p>
+            <div class="hero-cta">
+              <a href="works.html" class="btn btn-custom btn-primary me-3"
+                >View My Work</a
+              >
+              <a href="contact.html" class="btn btn-custom btn-outline-primary"
+                >Get in Touch</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        class="hero-scroll position-relative"
+        style="z-index: 2"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <span>Scroll to explore</span>
+        <div class="scroll-indicator">
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Works Preview -->
+    <section class="featured-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up">
+          Featured Projects
+        </h2>
+        <div class="row g-4">
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-house"></i></div>
+              <h3>Aura Crib</h3>
+              <p>
+                Property rental platform with Next.js, Supabase & payment
+                integration
+              </p>
+              <a href="works.html" class="read-more"
+                >Explore <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-clapperboard"></i>
+              </div>
+              <h3>Joyalty Media</h3>
+              <p>
+                Youth-focused media platform with Node/Express backend & modern
+                branding
+              </p>
+              <a href="works.html" class="read-more"
+                >Explore <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
+              <h3>Velour</h3>
+              <p>Wellness tracking PWA with Firebase & AI chat features</p>
+              <a href="works.html" class="read-more"
+                >Explore <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Preview -->
+    <section class="skills-preview-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up">
+          Core Competencies
+        </h2>
+        <div class="row g-3">
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="skill-badge">
+              <span class="skill-name">Frontend</span>
+              <span class="skill-level">Expert</span>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div class="skill-badge">
+              <span class="skill-name">Backend</span>
+              <span class="skill-level">Expert</span>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="skill-badge">
+              <span class="skill-name">Full Stack</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <div class="skill-badge">
+              <span class="skill-name">Healthcare</span>
+              <span class="skill-level">In Progress</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+      <div class="container text-center" data-aos="fade-up">
+        <h2 class="cta-title mb-4">Ready to Collaborate?</h2>
+        <p class="cta-subtitle mb-4">
+          Let's build something extraordinary together
+        </p>
+        <a href="contact.html" class="btn btn-custom btn-primary btn-lg"
+          >Start a Conversation</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5 class="brand-text">
+              <span class="brand-icon"><i class="fa-solid fa-gem"></i></span>
+              Smith
+            </h5>
+            <p class="text-muted small">
+              Full Stack Developer & Nursing Student
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6>Navigation</h6>
+            <ul class="list-unstyled small">
+              <li><a href="about.html">About</a></li>
+              <li><a href="works.html">Works</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="skills.html">Skills</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6>Connect</h6>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/6-its-smith/"
+                class="social-icon"
+                target="_blank"
+                title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/6itssmith"
+                class="social-icon"
+                target="_blank"
+                title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://x.com/smithiian_34_"
+                class="social-icon"
+                target="_blank"
+                title="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/6_its.smith/"
+                class="social-icon"
+                target="_blank"
+                title="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://wa.link/kqwl1d"
+                class="social-icon"
+                target="_blank"
+                title="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="bg-dark-gold opacity-25" />
+        <div class="text-center text-muted small">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Smith.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

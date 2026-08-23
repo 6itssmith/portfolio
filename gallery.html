@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Smith</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts: Quintessential (headings) & Nunito (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quintessential&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome — replace with your own CDN/kit link if you have one -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark premium-nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand brand-text" href="index.html">
+                <span class="brand-icon"><i class="fa-solid fa-gem"></i></span> Smith
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="works.html">Works</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">Gallery</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+                A visual look at projects, clinical work, and moments along the way
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-5">
+        <div class="container">
+
+            <!-- Filters -->
+            <div class="gallery-filters" data-aos="fade-up">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="dev">Web &amp; App Development</button>
+                <button class="gallery-filter-btn" data-filter="nursing">Nursing &amp; Healthcare</button>
+                <button class="gallery-filter-btn" data-filter="life">Community &amp; Life</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div class="gallery-item" data-category="dev" data-aos="fade-up" data-aos-delay="50"
+                     data-title="Aura Crib" data-desc="Property rental platform — Next.js, Supabase &amp; payment integration" data-tag="Web & App Development">
+                    <div class="gallery-item-media">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div class="gallery-item-zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Web &amp; App Dev</span>
+                        <h3 class="gallery-item-title">Aura Crib</h3>
+                        <p class="gallery-item-desc">Property rental platform screenshot</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="dev" data-aos="fade-up" data-aos-delay="100"
+                     data-title="Joyalty Media" data-desc="Youth-focused media platform — Node/Express backend &amp; modern branding" data-tag="Web & App Development">
+                    <div class="gallery-item-media">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </div>
+                    <div class="gallery-item-zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Web &amp; App Dev</span>
+                        <h3 class="gallery-item-title">Joyalty Media</h3>
+                        <p class="gallery-item-desc">Media platform screenshot</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="dev" data-aos="fade-up" data-aos-delay="150"
+                     data-title="Velour" data-desc="Wellness tracking PWA — Firebase &amp; AI chat features" data-tag="Web & App Development">
+                    <div class="gallery-item-media">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <div class="gallery-item-zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Web &amp; App Dev</span>
+                        <h3 class="gallery-item-title">Velour</h3>
+                        <p class="gallery-item-desc">Wellness app screenshot</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nursing" data-aos="fade-up" data-aos-delay="50"
+                     data-title="Clinical Practice" data-desc="Hands-on skills lab and clinical placement documentation" data-tag="Nursing & Healthcare">
+                    <div class="gallery-item-media">
+                        <i class="fa-solid fa-user-nurse"></i>
+                    </div>
+                    <div class="gallery-item-zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Nursing &amp; Healthcare</span>
+                        <h3 class="gallery-item-title">Clinical Practice</h3>
+                        <p class="gallery-item-desc">Skills lab photo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nursing" data-aos="fade-up" data-aos-delay="100"
+                     data-title="Anatomy &amp; Study Models" data-desc="Anatomy lab work and study materials from BSN coursework" data-tag="Nursing & Healthcare">
+                    <div class="gallery-item-media">
+                        <i class="fa-solid fa-book-medical"></i>
+                    </div>
+                    <div class="gallery-item-zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Nursing &amp; Healthcare</span>
+                        <h3 class="gallery-item-title">Anatomy &amp; Study Models</h3>
+                        <p class="gallery-item-desc">Study session photo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nursing" data-aos="fade-up" data-aos-delay="150"
+                     data-title="Health Theory Notes" data-desc="Visual study aids and structured notes from coursework" data-tag="Nursing & Healthcare">
+                    <div class="gallery-item-media">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <div class="gallery-item-zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Nursing &amp; Healthcare</span>
+                        <h3 class="gallery-item-title">Health Theory Notes</h3>
+                        <p class="gallery-item-desc">Study notes photo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="life" data-aos="fade-up" data-aos-delay="50"
+                     data-title="Church Community" data-desc="Documentation lead for community church services and events" data-tag="Community & Life">
+                    <div class="gallery-item-media">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <div class="gallery-item-zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Community &amp; Life</span>
+                        <h3 class="gallery-item-title">Church Community</h3>
+                        <p class="gallery-item-desc">Community event photo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="life" data-aos="fade-up" data-aos-delay="100"
+                     data-title="Campus Life" data-desc="Moments from university life and student activities" data-tag="Community & Life">
+                    <div class="gallery-item-media">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="gallery-item-zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Community &amp; Life</span>
+                        <h3 class="gallery-item-title">Campus Life</h3>
+                        <p class="gallery-item-desc">Campus photo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="life" data-aos="fade-up" data-aos-delay="150"
+                     data-title="Behind the Scenes" data-desc="A look at the workspace and process behind the projects" data-tag="Community & Life">
+                    <div class="gallery-item-media">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="gallery-item-zoom"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-item-category">Community &amp; Life</span>
+                        <h3 class="gallery-item-title">Behind the Scenes</h3>
+                        <p class="gallery-item-desc">Workspace photo</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="text-muted small text-center mt-5" data-aos="fade-up">
+                <i class="fa-solid fa-circle-info me-1"></i>
+                These tiles are placeholders — swap the icon inside each
+                <code>.gallery-item-media</code> for an <code>&lt;img&gt;</code> tag once you have real photos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade gallery-modal" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalTitle">Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="gallery-modal-media" id="galleryModalMedia">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+                    <p class="text-muted mt-3 mb-0" id="galleryModalDesc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="brand-text"><span class="brand-icon"><i class="fa-solid fa-gem"></i></span> Smith</h5>
+                    <p class="text-muted small">Full Stack Developer & Nursing Student</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Navigation</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Connect</h6>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-dark-gold opacity-25">
+            <div class="text-center text-muted small">
+                <p>&copy; 2024 Smith. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

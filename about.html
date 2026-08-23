@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Smith</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts: Quintessential (headings) & Nunito (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
+
+    <!-- Font Awesome — replace with your own CDN/kit link if you have one -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark premium-nav fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand brand-text" href="index.html">
+          <img class="brand-icon" src="assets/img/logo.png" alt="" /> Smith
+        </a>
+
+        <!-- Controls container: keeps theme toggler & hamburger aligned together on the right -->
+        <div
+          class="d-flex align-items-center gap-2 ms-auto me-2 me-lg-0 order-lg-last"
+        >
+          <div class="theme-toggler mb-0">
+            <i id="toggler" class="fa-regular fa-moon"></i>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="aboutDropdown"
+              >
+                <li>
+                  <a class="dropdown-item nav-close-item" href="about.html"
+                    >About Me</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="skills.html"
+                    >Skills</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="resume.html"
+                    >Resume</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Portfolio Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="portfolioDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Portfolio
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="portfolioDropdown"
+              >
+                <li>
+                  <a class="dropdown-item nav-close-item" href="works.html"
+                    >Works</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item nav-close-item" href="gallery.html"
+                    >Gallery</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title" data-aos="fade-up">About Me</h1>
+        <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Full Stack Developer & Year 1 BSN Nursing Student
+        </p>
+      </div>
+    </section>
+
+    <!-- Personal Info -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="profile-image-container">
+              <div class="profile-image-placeholder">
+                <span
+                  ><img
+                    src="https://res.cloudinary.com/dptw3wnjt/image/upload/v1787504676/-6gw5h6_r0liz3.jpg"
+                    alt=""
+                /></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="about-content">
+              <h2 class="section-title mb-4">Who Am I</h2>
+              <div class="info-grid mb-4">
+                <div class="info-item">
+                  <span class="info-label">Full Name:</span>
+                  <span class="info-value">Smith Ian Atetwe</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Date of Birth:</span>
+                  <span class="info-value">7th July 2005</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Gender:</span>
+                  <span class="info-value">Male</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Nationality:</span>
+                  <span class="info-value">Kenyan</span>
+                </div>
+              </div>
+
+              <p class="lead mb-4">
+                I'm a passionate developer with a unique blend of technical
+                expertise and healthcare commitment. While building robust
+                digital solutions across multiple platforms, I'm simultaneously
+                pursuing my BSN degree to make a meaningful impact in
+                healthcare.
+              </p>
+
+              <p class="mb-4">
+                My journey in tech spans frontend frameworks, backend systems,
+                and full-stack applications. My involvement in church community
+                work has refined my commitment to creating technology with
+                purpose.
+              </p>
+
+              <p class="mb-4">
+                I am also an active singer and have musical experience with over
+                12years of experience in singing and performing. I have been
+                part of various church choirs and have performed in numerous
+                events.
+              </p>
+
+              <div class="social-links-large">
+                <a href="#" class="social-btn" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="#" class="social-btn" title="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="#" class="social-btn" title="Twitter">
+                  <i class="fa-brands fa-x-twitter"></i>
+                  <span>Twitter</span>
+                </a>
+                <a href="#" class="social-btn" title="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Email</span>
+                </a>
+                <a href="#" class="social-btn" title="Email">
+                  <i class="fa-brands fa-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+                <a href="#" class="social-btn" title="Email">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <span>Whatsapp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Background -->
+    <section class="py-5 bg-section">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up">
+          Education & Background
+        </h2>
+
+        <div class="row g-4">
+          <!-- Current Education -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="education-card">
+              <div class="education-header">
+                <div class="education-icon">
+                  <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div>
+                  <h4 class="mb-0">Bachelor of Science in Nursing (BSN)</h4>
+                  <p class="text-muted small mb-0">
+                    Year 1 - Currently Enrolled
+                  </p>
+                </div>
+              </div>
+              <p class="text-muted mb-3">
+                Pursuing comprehensive nursing education with focus on patient
+                care, clinical practice, and healthcare innovation. Balancing
+                rigorous coursework with development projects.
+              </p>
+              <div class="courses-tag">
+                <span class="tag">Clinical Practice</span>
+                <span class="tag">Anatomy</span>
+                <span class="tag">Health Theory</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Background -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="education-card">
+              <div class="education-header">
+                <div class="education-icon">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div>
+                  <h4 class="mb-0">Web & App Development</h4>
+                  <p class="text-muted small mb-0">
+                    Self-Taught & Professional Experience
+                  </p>
+                </div>
+              </div>
+              <p class="text-muted mb-3">
+                Years of hands-on experience building full-stack applications.
+                Proficient in modern frameworks, databases, and deployment
+                strategies. Continuous learner in emerging technologies.
+              </p>
+              <div class="courses-tag">
+                <span class="tag">Frontend Dev</span>
+                <span class="tag">Backend Dev</span>
+                <span class="tag">DevOps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="row mt-5">
+          <div class="col-12" data-aos="fade-up">
+            <h3 class="mb-4">Certifications & Achievements</h3>
+            <div class="achievement-list">
+              <div class="achievement-item">
+                <div class="achievement-marker">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="achievement-content">
+                  <h6>Church Service Documentation Lead</h6>
+                  <p class="text-muted small">
+                    Produced official documentation for community services
+                  </p>
+                </div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-marker">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="achievement-content">
+                  <h6>[Certification Name]</h6>
+                  <p class="text-muted small">
+                    Year - Add your certifications here
+                  </p>
+                </div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-marker">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="achievement-content">
+                  <h6>[Achievement Name]</h6>
+                  <p class="text-muted small">
+                    Description of your achievement
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community & Values -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up">
+          Community & Values
+        </h2>
+
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="value-card">
+              <div class="value-icon"><i class="fa-solid fa-church"></i></div>
+              <h5>Church Community</h5>
+              <p class="text-muted">
+                Active member serving in community initiatives. Experience
+                creating and maintaining official documentation for church
+                services and events.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+              <h5>Collaborative Spirit</h5>
+              <p class="text-muted">
+                Believe in the power of teamwork and open communication. My
+                unique background helps bridge technical and human-centered
+                solutions.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="value-card">
+              <div class="value-icon"><i class="fa-solid fa-rocket"></i></div>
+              <h5>Innovation</h5>
+              <p class="text-muted">
+                Constantly exploring new technologies and methodologies to
+                create impactful solutions that make a real difference.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="value-card">
+              <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
+              <h5>Purpose-Driven Work</h5>
+              <p class="text-muted">
+                Blend development expertise with healthcare commitment to create
+                solutions that matter and improve people's lives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5 class="brand-text">
+              <span class="brand-icon"><i class="fa-solid fa-gem"></i></span>
+              Smith
+            </h5>
+            <p class="text-muted small">
+              Full Stack Developer & Nursing Student
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6>Navigation</h6>
+            <ul class="list-unstyled small">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="works.html">Works</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="skills.html">Skills</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6>Connect</h6>
+            <div class="social-links">
+              <a href="#" class="social-icon" title="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon" title="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="#" class="social-icon" title="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="bg-dark-gold opacity-25" />
+        <div class="text-center text-muted small">
+          <p>&copy; 2024 Smith. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

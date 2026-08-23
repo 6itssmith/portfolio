@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Theme Toggle Demo</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            /* Smooth background & text transition */
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        i {
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            /* Transition for hover state */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+
+        i:active {
+            transform: scale(0.9);
+        }
+
+        /* Rotation keyframe animation */
+        @keyframes spinRotate {
+            0% {
+                transform: rotate(0deg) scale(0.6);
+                opacity: 0.3;
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Class triggered via JavaScript to run the spin animation */
+        .spin {
+            animation: spinRotate 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body>
+
+    <i id="toggler" class="fa-regular fa-moon"></i>
+
+    <script>
+        const toggler = document.getElementById('toggler');
+
+        toggler.addEventListener('click', () => {
+            // Trigger the spin animation
+            toggler.classList.add('spin');
+
+            // Swap icon classes and background colors
+            if (toggler.classList.contains('fa-moon')) {
+                toggler.classList.remove('fa-moon');
+                toggler.classList.add('fa-sun');
+                document.body.style.backgroundColor = '#0a0a0a';
+                document.body.style.color = '#ffffff';
+            } else {
+                toggler.classList.remove('fa-sun');
+                toggler.classList.add('fa-moon');
+                document.body.style.backgroundColor = '#ffffff';
+                document.body.style.color = '#0a0a0a';
+            }
+
+            // Remove spin class after animation completes so it can re-trigger on next click
+            setTimeout(() => {
+                toggler.classList.remove('spin');
+            }, 500);
+        });
+    </script>
+</body>
+</html>

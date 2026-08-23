@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Smith</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts: Quintessential (headings) & Nunito (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quintessential&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome — replace with your own CDN/kit link if you have one -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark premium-nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand brand-text" href="index.html">
+                <span class="brand-icon"><i class="fa-solid fa-gem"></i></span> Smith
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="works.html">Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">Let's Connect</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Get in touch for collaborations, opportunities, or just to say hello</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-7" data-aos="fade-right">
+                    <h2 class="section-title mb-4">Send Me a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control form-control-custom" id="name" 
+                                   name="name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control form-control-custom" id="email" 
+                                   name="email" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control form-control-custom" id="subject" 
+                                   name="subject" placeholder="What's this about?" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="inquiryType" class="form-label">Inquiry Type</label>
+                            <select class="form-select form-select-custom" id="inquiryType" name="inquiryType" required>
+                                <option value="">Select an option</option>
+                                <option value="project">Project Collaboration</option>
+                                <option value="job">Job Opportunity</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="question">Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control form-control-custom" id="message" name="message" 
+                                      rows="6" placeholder="Tell me more about your inquiry..."></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="budget" class="form-label">Budget Range (Optional)</label>
+                            <select class="form-select form-select-custom" id="budget" name="budget">
+                                <option value="">No budget info</option>
+                                <option value="startup">Startup Budget ($5k-$10k)</option>
+                                <option value="growth">Growth Budget ($10k-$50k)</option>
+                                <option value="enterprise">Enterprise ($50k+)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">
+                                I agree to the terms and privacy policy
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-custom btn-primary btn-lg w-100">
+                            Send Message
+                        </button>
+
+                        <div id="formMessage" class="mt-3 alert" style="display: none;"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <h2 class="section-title mb-4">Contact Information</h2>
+
+                    <div class="contact-info-card mb-4">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-body">
+                            <h6>Email</h6>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                            <p class="text-muted small">Response within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card mb-4">
+                        <div class="info-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div class="info-body">
+                            <h6>LinkedIn</h6>
+                            <a href="#" target="_blank">Smith's Profile</a>
+                            <p class="text-muted small">Connect for professional updates</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card mb-4">
+                        <div class="info-icon"><i class="fa-brands fa-github"></i></div>
+                        <div class="info-body">
+                            <h6>GitHub</h6>
+                            <a href="#" target="_blank">github.com/yourprofile</a>
+                            <p class="text-muted small">Check out my code and projects</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card mb-4">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="info-body">
+                            <h6>Phone</h6>
+                            <a href="tel:+1234567890">+1 (234) 567-8900</a>
+                            <p class="text-muted small">Available for calls & messages</p>
+                        </div>
+                    </div>
+
+                    <div class="divider my-5"></div>
+
+                    <h3 class="mb-4">Follow Me</h3>
+                    <div class="social-follow-grid">
+                        <a href="#" class="social-follow-btn">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-follow-btn">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" class="social-follow-btn">
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-follow-btn">
+                            <span>Portfolio</span>
+                        </a>
+                    </div>
+
+                    <div class="info-box mt-5">
+                        <h6 class="mb-3"><i class="fa-solid fa-lightbulb"></i> Let's Talk About</h6>
+                        <ul class="text-muted small">
+                            <li><i class="fa-solid fa-check"></i> Full-stack development projects</li>
+                            <li><i class="fa-solid fa-check"></i> Healthcare tech innovations</li>
+                            <li><i class="fa-solid fa-check"></i> Web and mobile applications</li>
+                            <li><i class="fa-solid fa-check"></i> Collaborative opportunities</li>
+                            <li><i class="fa-solid fa-check"></i> Technical consulting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Availability Section -->
+    <section class="py-5 bg-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h3 class="mb-4">Availability</h3>
+                    <div class="availability-grid">
+                        <div class="availability-item">
+                            <span class="status-badge available">Available</span>
+                            <p class="mb-0">For new projects</p>
+                        </div>
+                        <div class="availability-item">
+                            <span class="status-badge busy">Studying</span>
+                            <p class="mb-0">BSN Year 1 courses</p>
+                        </div>
+                        <div class="availability-item">
+                            <span class="status-badge active">Active</span>
+                            <p class="mb-0">On current projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h3 class="mb-4">Response Times</h3>
+                    <ul class="response-list">
+                        <li>
+                            <span class="label">Email Inquiry:</span>
+                            <span class="value">24-48 hours</span>
+                        </li>
+                        <li>
+                            <span class="label">Project Discussion:</span>
+                            <span class="value">Within 1 week</span>
+                        </li>
+                        <li>
+                            <span class="label">Technical Consultation:</span>
+                            <span class="value">Flexible timing</span>
+                        </li>
+                        <li>
+                            <span class="label">Urgent Matters:</span>
+                            <span class="value">ASAP</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="brand-text"><span class="brand-icon"><i class="fa-solid fa-gem"></i></span> Smith</h5>
+                    <p class="text-muted small">Full Stack Developer & Nursing Student</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Navigation</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Connect</h6>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-dark-gold opacity-25">
+            <div class="text-center text-muted small">
+                <p>&copy; 2024 Smith. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
