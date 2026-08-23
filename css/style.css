@@ -1026,7 +1026,26 @@ p {
   justify-content: center;
   overflow: hidden;
 }
+/* Container wrappers */
+.project-image-placeholder,
+.placeholder-content,
+.placeholder-content span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px; /* Optional rounded corners */
+}
 
+/* Make images scale smoothly without distortion */
+.placeholder-content img {
+  width: 100%;
+  height: auto;
+  max-height: 450px; /* Adjust max height to fit your card layout */
+  object-fit: cover;  /* Ensures full coverage without stretching */
+  object-position: top center; /* Keeps header/hero section of screenshots visible */
+  display: block;
+}
 .placeholder-content {
   display: flex;
   align-items: center;
@@ -1508,7 +1527,14 @@ p {
   border-color: var(--accent-gold);
   background: var(--tertiary-dark);
 }
+.social-follow-btn {
+  display: inline-flex;
+  align-items: center;
+}
 
+.social-follow-btn i {
+  margin-right: 8px;
+}
 .info-box {
   background: var(--secondary-dark);
   border: 1px solid var(--border-color);

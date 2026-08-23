@@ -1,1 +1,13 @@
 *.md
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Node (only relevant once you add the Resend function — see RESEND_EMAIL_SETUP.md)
+node_modules/
+.env
+.netlify/

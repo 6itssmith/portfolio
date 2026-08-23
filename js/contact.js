@@ -144,27 +144,58 @@ function handleFormSubmit(e) {
     // Prepare data
     const data = Object.fromEntries(formData);
     
-    // Simulate sending (replace with actual API call)
-    setTimeout(() => {
-        console.log('Form Data Submitted:', data);
-        
-        // Show success message
-        showFormMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
-        
-        // Reset form
+   fetch("/send-email", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+})
+    .then(async (response) => {
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+            throw new Error(
+                result.error || "Failed to send message."
+            );
+        }
+
+        return result;
+    })
+    .then(() => {
+        showFormMessage(
+            "Message sent successfully! I'll get back to you soon.",
+            "success"
+        );
+
         form.reset();
-        inputs.forEach(input => input.classList.remove('is-invalid'));
-        
-        // Reset button
+
+        inputs.forEach((input) => {
+            input.classList.remove("is-invalid");
+        });
+    })
+    .catch((error) => {
+        console.error(error);
+
+        showFormMessage(
+            "Something went wrong. Please try emailing me directly.",
+            "danger"
+        );
+    })
+    .finally(() => {
         submitButton.disabled = false;
         submitButton.textContent = originalText;
 
-        // Scroll to message
-        const messageDiv = document.getElementById('formMessage');
+        const messageDiv =
+            document.getElementById("formMessage");
+
         if (messageDiv) {
-            messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            messageDiv.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+            });
         }
-    }, 1500);
+    });
 }
 
 function showFormMessage(message, type) {
